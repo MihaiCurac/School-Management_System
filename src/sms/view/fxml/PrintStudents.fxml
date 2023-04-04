@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.PrintStudentController">
+    <children>
+        <Pane prefHeight="85.0" prefWidth="900.0" style="-fx-background-color: #c27400;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" fontSmoothingType="LCD" layoutX="285.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student List" textAlignment="CENTER">
+                    <font>
+                        <Font name="Consolas" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <ComboBox fx:id="loadYears" layoutX="128.0" layoutY="111.0" onAction="#loadYears" prefHeight="25.0" prefWidth="109.0" promptText="Select Year" />
+      <Label layoutX="40.0" layoutY="112.0" prefHeight="23.0" prefWidth="88.0" text="Year of Study:" />
+        <JFXButton fx:id="generate" layoutX="759.0" layoutY="106.0" onAction="#generate" prefHeight="0.0" prefWidth="109.0" style="-fx-background-color: #1976D2;" text="SHOW" textFill="WHITE">
+            <font>
+                <Font name="Consolas" size="20.0" />
+            </font>
+        </JFXButton>
+      <Pane layoutX="37.0" layoutY="188.0" prefHeight="400.0" prefWidth="832.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css" />
+      <TableView fx:id="studentTable" layoutX="40.0" layoutY="160.0" prefHeight="425.0" prefWidth="826.0">
+        <columns>
+          <TableColumn fx:id="adNoColumn" prefWidth="56.0" text="Ad No" />
+            <TableColumn fx:id="fullNameColumn" prefWidth="197.5999984741211" text="Full Name" />
+            <TableColumn fx:id="dobColumn" prefWidth="113.5999755859375" text="DOB" />
+            <TableColumn fx:id="genderColumn" prefWidth="100.0" text="Gender" />
+            <TableColumn fx:id="contactNoColumn" prefWidth="140.80001831054688" text="Contact No" />
+            <TableColumn fx:id="addressColumn" prefWidth="217.60003662109375" text="Address" />
+        </columns>
+      </TableView>
+      <JFXButton id="button" fx:id="Back" layoutX="24.0" layoutY="6.0" onAction="#Back" style="-fx-background-color: #c27400;" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #c27400;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+</AnchorPane>

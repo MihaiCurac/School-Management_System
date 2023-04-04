@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.PrintStaffController">
+    <children>
+        <Pane prefHeight="85.0" prefWidth="900.0" style="-fx-background-color: #8400c2;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" fontSmoothingType="LCD" layoutX="312.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff List" textAlignment="CENTER">
+                    <font>
+                        <Font name="Consolas" size="50.0" />
+                    </font>
+                </Text>
+            <JFXButton id="button" fx:id="Back" layoutX="23.0" layoutY="7.0" onAction="#Back" style="-fx-background-color: #8400c2;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+                     <image>
+                        <Image url="@../../other/img/Back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            </children>
+        </Pane>
+        <JFXButton fx:id="generate" layoutX="395.0" layoutY="99.0" onAction="#generate" prefHeight="0.0" prefWidth="109.0" style="-fx-background-color: #1976D2;" text="Generate" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </JFXButton>
+        <Pane layoutX="37.0" layoutY="151.0" prefHeight="437.0" prefWidth="832.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css" />
+        <TableView fx:id="staffTable" layoutX="40.0" layoutY="154.0" prefHeight="430.0" prefWidth="826.0">
+            <columns>
+                <TableColumn fx:id="EmpNoColumn" prefWidth="56.800018310546875" text="Emp No" />
+                <TableColumn fx:id="NameColumn" prefWidth="103.99999237060547" text="Name" />
+                <TableColumn fx:id="taughtSubjectColumn" prefWidth="100.79998779296875" text="Taught Subject" />
+                <TableColumn fx:id="dobColumn" minWidth="0.0" prefWidth="99.20001220703125" text="DOB" />
+                <TableColumn fx:id="genderColumn" minWidth="0.0" prefWidth="71.20004272460938" text="Gender" />
+                <TableColumn fx:id="emailColumn" prefWidth="113.60000610351562" text="Email" />
+                <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="102.39996337890625" text="Phone" />
+                <TableColumn fx:id="addressColumn" prefWidth="172.800048828125" text="Address" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

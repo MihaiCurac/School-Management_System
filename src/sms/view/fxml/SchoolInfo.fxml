@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.SchoolInfoController">
+    <children>
+        <Label layoutX="259.0" layoutY="142.0" prefHeight="23.0" prefWidth="138.0" text="Name of School :" />
+        <TextField fx:id="SchoolNameField" layoutX="397.0" layoutY="141.0" prefHeight="25.0" prefWidth="242.0" promptText="Name of School" />
+        <Label layoutX="259.0" layoutY="183.0" prefHeight="23.0" prefWidth="138.0" text="Address :" />
+        <TextField fx:id="SchoolAddressField" layoutX="397.0" layoutY="182.0" prefHeight="25.0" prefWidth="242.0" promptText="Address" />
+        <Label layoutX="259.0" layoutY="224.0" prefHeight="23.0" prefWidth="138.0" text="Classes Available :" />
+        <TextField fx:id="classAvailableField" layoutX="397.0" layoutY="223.0" prefHeight="25.0" prefWidth="242.0" promptText="Classes Available" />
+        <Label layoutX="259.0" layoutY="267.0" prefHeight="23.0" prefWidth="138.0" text="Type of School :" />
+        <TextField fx:id="schoolTypeField" layoutX="397.0" layoutY="266.0" prefHeight="25.0" prefWidth="242.0" promptText="Type of School" />
+        <Label layoutX="259.0" layoutY="307.0" prefHeight="23.0" prefWidth="138.0" text="Postal Code :" />
+        <TextField fx:id="postalCodeField" layoutX="397.0" layoutY="306.0" prefHeight="25.0" prefWidth="242.0" promptText="Postal Code" />
+        <JFXButton fx:id="updateDetails" layoutX="395.0" layoutY="508.0" onAction="#updateDetails" prefHeight="50.0" prefWidth="109.0" style="-fx-background-color: #0077ff;" text="UPDATE" textFill="WHITE">
+            <font>
+                <Font name="Consolas" size="20.0" />
+            </font>
+            <stylesheets>
+                <URL value="@css/RegStudent.css" />
+            </stylesheets>
+        </JFXButton>
+        <Pane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: #e33b8c;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" layoutX="203.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School Information">
+                    <font>
+                        <Font name="Consolas" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <Label layoutX="259.0" layoutY="350.0" prefHeight="23.0" prefWidth="138.0" text="Date of Establishment :" />
+      <TextField fx:id="dateOfEstdField" layoutX="397.0" layoutY="349.0" prefHeight="25.0" prefWidth="242.0" promptText="Date of Establishment" />
+      <Label layoutX="260.0" layoutY="391.0" prefHeight="23.0" prefWidth="138.0" text="School ID No : " />
+      <TextField fx:id="schoolIDField" layoutX="398.0" layoutY="390.0" prefHeight="25.0" prefWidth="242.0" promptText="School ID No " />
+      <Label layoutX="260.0" layoutY="434.0" prefHeight="23.0" prefWidth="138.0" text="Name of Principal : " />
+      <TextField fx:id="nameOfPrincipalField" layoutX="398.0" layoutY="433.0" prefHeight="25.0" prefWidth="242.0" promptText="Name of Principal : " />
+      <JFXButton id="button" fx:id="Back" layoutX="26.0" layoutY="1.0" onAction="#Back" prefHeight="68.0" prefWidth="91.0" style="-fx-background-color: #e33b8c;" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+</AnchorPane>

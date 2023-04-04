@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="manageStudents" prefHeight="600.0" prefWidth="900.0" stylesheets="@css/RegStudent.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.StudentManagementController">
+
+    <children>
+        <ImageView fx:id="StaffMgmt" fitHeight="150.0" fitWidth="200.0" layoutX="491.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../other/img/ManageStudent.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="StudentMgmt" fitHeight="150.0" fitWidth="200.0" layoutX="267.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../other/img/RegStudent.png" />
+            </image>
+        </ImageView>
+        <JFXButton fx:id="btnStudentReg" buttonType="RAISED" layoutX="251.0" layoutY="352.0" onAction="#SetBtnStudentReg" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #0077ff;" stylesheets="@css/RegStudent.css" text="Student Registration" textFill="WHITE">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnStudentMnge" buttonType="RAISED" layoutX="479.0" layoutY="352.0" onAction="#setBtnStudentMnge" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #0077ff;" stylesheets="@css/RegStudent.css" text="Student Information" textFill="WHITE">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </JFXButton>
+        <Pane prefHeight="94.0" prefWidth="900.0" style="-fx-background-color: #003f91;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" layoutX="203.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+                    <font>
+                        <Font name="Consolas" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <JFXButton id="button" fx:id="Back" layoutX="23.0" layoutY="12.0" onAction="#Back" style="-fx-background-color: #003f91;" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+
+</AnchorPane>

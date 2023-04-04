@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="manageStudents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.controller.ManageStudentsController">
+    <children>
+        <Label layoutX="461.0" layoutY="154.0" prefHeight="23.0" prefWidth="138.0" text="Admission Number :" />
+        <TextField fx:id="adNoField" layoutX="599.0" layoutY="153.0" prefHeight="25.0" prefWidth="242.0" promptText="Admission Number" />
+        <Label layoutX="461.0" layoutY="199.0" prefHeight="23.0" prefWidth="138.0" text="Full Name :" />
+        <TextField fx:id="fullNameField" layoutX="599.0" layoutY="198.0" prefHeight="25.0" prefWidth="242.0" promptText="Full Name" />
+        <Label layoutX="461.0" layoutY="294.0" prefHeight="23.0" prefWidth="138.0" text="Date of Birth :" />
+        <TextField fx:id="dobField" layoutX="599.0" layoutY="293.0" prefHeight="25.0" prefWidth="242.0" promptText="YYYY/MM/DD" />
+        <Label layoutX="461.0" layoutY="341.0" prefHeight="23.0" prefWidth="138.0" text="Gender : " />
+        <Label layoutX="461.0" layoutY="387.0" prefHeight="23.0" prefWidth="138.0" text="Contact Number :" />
+        <TextField fx:id="phoneField" layoutX="599.0" layoutY="386.0" prefHeight="25.0" prefWidth="242.0" promptText="Contact Number" />
+        <Label layoutX="461.0" layoutY="441.0" prefHeight="23.0" prefWidth="138.0" text="Address :" />
+        <TextField fx:id="addressField" layoutX="599.0" layoutY="440.0" prefHeight="25.0" prefWidth="242.0" promptText="Address : " />
+        <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="391.0" layoutY="526.0" onAction="#btnDelete" style="-fx-background-color: #0077ff;" text="DELETE" textFill="WHITE" AnchorPane.rightAnchor="392.2">
+            <font>
+                <Font name="Consolas" size="25.0" />
+            </font>
+            <stylesheets>
+                <URL value="@css/RegStudent.css" />
+            </stylesheets>
+        </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="203.0" layoutY="523.0" onAction="#btnUpdate" prefHeight="52.0" prefWidth="122.0" style="-fx-background-color: #0077ff;" text="UPDATE" textFill="WHITE" AnchorPane.leftAnchor="203.0">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+         <stylesheets>
+            <URL value="@css/RegStudent.css" />
+         </stylesheets>
+      </JFXButton>
+        <Pane prefHeight="94.0" prefWidth="900.0" style="-fx-background-color: #003f91;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" layoutX="203.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management" textAlignment="CENTER">
+                    <font>
+                        <Font name="Consolas" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <TextField fx:id="AdNo" layoutX="80.0" layoutY="281.0" prefHeight="37.0" prefWidth="200.0" promptText="Enter Student ID" />
+      <JFXButton id="btnSearch" fx:id="searchStudent" buttonType="RAISED" layoutX="287.0" layoutY="281.0" onAction="#searchStudent" prefHeight="37.0" prefWidth="78.0" style="-fx-background-color: #0077ff;" stylesheets="@css/RegStudent.css" text="SHOW">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnShowAll" buttonType="RAISED" layoutX="564.0" layoutY="523.0" onAction="#setbtnShowAll" prefHeight="52.0" prefWidth="156.0" style="-fx-background-color: #0077ff;" stylesheets="@css/RegStudent.css" text="SHOW ALL" textFill="WHITE" AnchorPane.rightAnchor="180.0">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="genderField" layoutX="599.0" layoutY="339.0" prefHeight="25.0" prefWidth="242.0" promptText="Gender" />
+      <Pane layoutX="456.0" layoutY="118.0" prefHeight="35.0" prefWidth="3.0" style="-fx-background-color: #1976D2;" visible="false" />
+      <JFXButton id="button" fx:id="Back" layoutX="25.0" layoutY="11.0" onAction="#Back" style="-fx-background-color: #003f91;" text=" ">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #1976D2;">
+               <image>
+                  <Image url="@../../other/img/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="461.0" layoutY="246.0" prefHeight="23.0" prefWidth="138.0" text="Year of study:" />
+      <TextField fx:id="yearofstudyField" layoutX="599.0" layoutY="245.0" prefHeight="25.0" prefWidth="242.0" promptText="Year of Study" />
+    </children>
+</AnchorPane>
